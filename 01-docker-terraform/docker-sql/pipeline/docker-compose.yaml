@@ -9,6 +9,8 @@ services:
       - ny_taxi_postgres_data:/var/lib/postgresql
     ports:
       - "5432:5432"
+    networks:
+      - my_custom_network
 
   pgadmin:
     image: dpage/pgadmin4
@@ -19,9 +21,20 @@ services:
       - pgadmin_data:/var/lib/pgadmin
     ports:
       - "8085:80"
+    networks:
+      - my_custom_network
 
-
+  taxi_ingest:
+    image: taxi_ingest:v001
+    networks:
+      - my_custom_network
+    depends_on:
+      - pgdatabase
 
 volumes:
   ny_taxi_postgres_data:
   pgadmin_data:
+
+networks:
+  my_custom_network:
+    name: my_custom_network
