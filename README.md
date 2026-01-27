@@ -8,4 +8,4 @@
   - [Green Tripdata 2025-11 Dataset](/01-docker-terraform/green_tripdata_2025-11.parquet)
   - [Tripdata with zones Dataset](/01-docker-terraform/taxi_zone_lookup.csv)
 - public learning posts
-  - [Linkedin-01]()
+  - [Linkedin-01](https://www.linkedin.com/posts/tahanawfal_dockerizingdatapipelines-ugcPost-7421890957907742720--vs7)
