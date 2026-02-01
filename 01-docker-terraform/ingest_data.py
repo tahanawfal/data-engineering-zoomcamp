@@ -3,7 +3,7 @@
 
 import pandas as pd
 from sqlalchemy import create_engine
-from tqdm.auto import tqdm
+from tqdm.auto import tqdm    #see the progress bar of ingesting data
 import argparse
 import os
 
