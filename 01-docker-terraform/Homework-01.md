@@ -37,21 +37,25 @@ Given the following `docker-compose.yaml`, what is the `hostname` and `port` tha
 
 ```yaml
 services:
-  db:
-    container_name: postgres
-    image: postgres:17-alpine
+  pgdatabase:
+    container_name: pgdatabase
+    image: postgres:18
+    networks:
+      - pg-network
     environment:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'postgres'
       POSTGRES_DB: 'ny_taxi'
     ports:
-      - '5433:5432'
+      - '5432:5432'
     volumes:
-      - vol-pgdata:/var/lib/postgresql/data
+      - vol-pgdata:/var/lib/postgresql
 
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4:latest
+    networks:
+      - pg-network
     environment:
       PGADMIN_DEFAULT_EMAIL: "pgadmin@pgadmin.com"
       PGADMIN_DEFAULT_PASSWORD: "pgadmin"
@@ -62,9 +66,12 @@ services:
 
 volumes:
   vol-pgdata:
-    name: vol-pgdata
   vol-pgadmin_data:
-    name: vol-pgadmin_data
+
+networks:
+  pg-network:
+    name: pg-network
+    driver: bridge
 ```
 
 - postgres:5433
@@ -263,9 +270,6 @@ LIMIT 1;
 In this section homework we'll prepare the environment by creating resources in GCP with Terraform.
 
 In your VM on GCP/Laptop/GitHub Codespace install Terraform.
-Copy the files from the course repo
-[here](../../../01-docker-terraform/terraform/terraform) to your VM/Laptop/GitHub Codespace.
-
 Modify the files as necessary to create a GCP Bucket and Big Query Dataset.
 
 
