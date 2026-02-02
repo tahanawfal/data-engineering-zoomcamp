@@ -13,7 +13,7 @@
 ### 02-workflow-orchestration
 - [homework choices](/02-workflow-orchestration/Homework.md)
 - homework code
-  - [Kestra scripts](/02-workflow-orchestration/flow/)
+  - [Kestra scripts](/02-workflow-orchestration/flows/)
   - [docker compose file](/02-workflow-orchestration/docker-compose.yaml)
 - public learning posts
   - 
