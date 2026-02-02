@@ -9,3 +9,11 @@
   - [Tripdata with zones Dataset](/01-docker-terraform/taxi_zone_lookup.csv)
 - public learning posts
   - [Linkedin-01](https://www.linkedin.com/posts/tahanawfal_dockerizingdatapipelines-ugcPost-7421890957907742720--vs7)
+
+### 02-workflow-orchestration
+- [homework choices](/02-workflow-orchestration/Homework.md)
+- homework code
+  - [Kestra scripts](/02-workflow-orchestration/flow/)
+  - [docker compose file](/02-workflow-orchestration/docker-compose.yaml)
+- public learning posts
+  - 
