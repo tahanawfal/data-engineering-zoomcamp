@@ -2,3 +2,4 @@ Dockerfile
 .python-version
 pyproject.toml
 uv.lock
+.env
