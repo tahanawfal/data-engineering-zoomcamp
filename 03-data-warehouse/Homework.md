@@ -2,7 +2,7 @@
 
 First, must creating external table referring to my bucket and the parquet files in it, then creating materialized table in BQ
 ```sql
-CREATE OR REPLACE EXTERNAL TABLE `zoomcamp-project-485916.zoomcamp.external_yellow_taxi_2024`
+CREATE OR REPLACE EXTERNAL TABLE `zoomcamp-project-485916.zoomcamp.external_yellow_taxi`
 OPTIONS (
   format = 'PARQUET',
   uris = ['gs://kestra-zoomcamp-taha-demo/yellow_tripdata_2024-*.parquet']
@@ -17,7 +17,7 @@ What is count of records for the 2024 Yellow Taxi Data?
 - 85,431,289
 
 ```sql
-SELECT COUNT(1) FROM `zoomcamp-project-485916.zoomcamp.external_yellow_taxi_2024`;
+SELECT COUNT(1) FROM `zoomcamp-project-485916.zoomcamp.external_yellow_taxi`;
 ```
 
 ## Question 2. Data read estimation
@@ -32,7 +32,7 @@ What is the **estimated amount** of data that will be read when this query is ex
 - 0 MB for the External Table and 0MB for the Materialized Table
 
 ```sql
-SELECT DISTINCT COUNT(PULocationID) FROM `zoomcamp-project-485916.zoomcamp.external_yellow_taxi_2024`;
+SELECT DISTINCT COUNT(PULocationID) FROM `zoomcamp-project-485916.zoomcamp.external_yellow_taxi`;
 
 SELECT DISTINCT COUNT(PULocationID) FROM `zoomcamp-project-485916.zoomcamp.regular_yellow_taxi`;
 ```
@@ -42,8 +42,7 @@ SELECT DISTINCT COUNT(PULocationID) FROM `zoomcamp-project-485916.zoomcamp.regul
 Write a query to retrieve the PULocationID from the table (not the external table) in BigQuery. Now write a query to retrieve the PULocationID and DOLocationID on the same table.
 
 Why are the estimated number of Bytes different?
-- BigQuery is a columnar database, and it only scans the specific columns requested in the query. Querying two columns (PULocationID, DOLocationID) requires ✅
-reading more data than querying one column (PULocationID), leading to a higher estimated number of bytes processed.
+- BigQuery is a columnar database, and it only scans the specific columns requested in the query. Querying two columns (PULocationID, DOLocationID) requires reading more data than querying one column (PULocationID), leading to a higher estimated number of bytes processed. ✅
 - BigQuery duplicates data across multiple storage partitions, so selecting two columns instead of one requires scanning the table twice, 
 doubling the estimated bytes processed.
 - BigQuery automatically caches the first queried column, so adding a second column increases processing time but does not affect the estimated bytes scanned.
@@ -64,7 +63,7 @@ How many records have a fare_amount of 0?
 - 8,333 ✅
 
 ```sql
-SELECT COUNT(1) FROM `zoomcamp-project-485916.zoomcamp.external_yellow_taxi_2024`
+SELECT COUNT(1) FROM `zoomcamp-project-485916.zoomcamp.external_yellow_taxi`
 WHERE fare_amount = 0;
 ```
 
@@ -82,7 +81,7 @@ CREATE OR REPLACE TABLE `zoomcamp-project-485916.zoomcamp.yellow_taxi_optimized`
 PARTITION BY DATE(tpep_dropoff_datetime)
 CLUSTER BY VendorID
 AS
-SELECT * FROM `zoomcamp-project-485916.zoomcamp.external_yellow_taxi_2024`;
+SELECT * FROM `zoomcamp-project-485916.zoomcamp.external_yellow_taxi`;
 ```
 
 ## Question 6. Partition benefits
@@ -129,6 +128,7 @@ It is best practice in Big Query to always cluster your data:
 ## Question 9. Understanding table scans
 
 Write a `SELECT count(*)` query FROM the materialized table you created. How many bytes does it estimate will be read? Why?
+
 The Answer: 0 MB
 
 ```sql

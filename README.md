@@ -17,3 +17,10 @@
   - [docker compose file](/02-workflow-orchestration/docker-compose.yaml)
 - public learning posts
   - []()
+
+### 03-data-warehouse
+- [homework choices](/03-data-warehouse/Homework.md)
+- homework code
+  - [Loading Data Script](/03-data-warehouse/load_yellow_taxi_data.py)
+- public learning posts
+  - []()
