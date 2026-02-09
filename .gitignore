@@ -3,3 +3,4 @@ Dockerfile
 pyproject.toml
 uv.lock
 .env
+gcs.json
