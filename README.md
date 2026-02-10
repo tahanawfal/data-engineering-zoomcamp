@@ -23,4 +23,4 @@
 - homework code
   - [Loading Data Script](/03-data-warehouse/load_yellow_taxi_data.py)
 - public learning posts
-  - []()
+  - [Linkedin-02](https://www.linkedin.com/posts/tahanawfal_dezoomcamp-share-7426910360328171520-ppCU)
