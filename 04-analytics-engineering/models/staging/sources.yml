@@ -6,8 +6,8 @@ sources:
     database: zoomcamp-project-485916
     schema: zoomcamp
     tables:
-      - name: external_green_taxi
-      - name: external_yellow_taxi
+      - name: green_taxi_trips
+      - name: yellow_taxi_trips
 
 models:
   - name: green_tripdata
