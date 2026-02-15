@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Raw data sources for NYC taxi trips"
+    database: zoomcamp-project-485916
+    schema: zoomcamp
+    tables:
+      - name: external_green_taxi
+      - name: external_yellow_taxi
+
+models:
+  - name: green_tripdata
+    description: "Staging model for green taxi data"
