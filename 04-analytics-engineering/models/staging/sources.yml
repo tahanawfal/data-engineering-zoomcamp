@@ -1,5 +1,3 @@
-version: 2
-
 sources:
   - name: raw_data
     description: "Raw data sources for NYC taxi trips"
@@ -8,7 +6,3 @@ sources:
     tables:
       - name: green_taxi_trips
       - name: yellow_taxi_trips
-
-models:
-  - name: green_tripdata
-    description: "Staging model for green taxi data"
