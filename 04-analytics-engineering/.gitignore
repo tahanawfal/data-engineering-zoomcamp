@@ -1,0 +1,8 @@
+.vscode/
+analyses/
+bigqyery_ingesting/
+dbt_internal_packages/
+dbt_packages/
+logs/
+target/
+gcs.json/
