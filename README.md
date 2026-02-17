@@ -20,7 +20,12 @@
 
 ### 03-data-warehouse
 - [homework choices](/03-data-warehouse/Homework.md)
-- homework code
-  - [Loading Data Script](/03-data-warehouse/load_yellow_taxi_data.py)
+- [Loading Data Script](/03-data-warehouse/load_yellow_taxi_data.py)
 - public learning posts
   - [Linkedin-02](https://www.linkedin.com/posts/tahanawfal_dezoomcamp-share-7426910360328171520-ppCU)
+
+### 04-analytics-engineering
+- [homework choices](/04-analytics-engineering/Homework.md)
+- [dbt project files](/04-analytics-engineering/)
+- public learning posts
+  - []()
