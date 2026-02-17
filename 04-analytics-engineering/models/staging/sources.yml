@@ -1,0 +1,8 @@
+sources:
+  - name: raw_data
+    description: "Raw data sources for NYC taxi trips"
+    database: zoomcamp-project-485916
+    schema: zoomcamp
+    tables:
+      - name: green_taxi_trips
+      - name: yellow_taxi_trips
