@@ -1,6 +1,5 @@
-.vscode/
 analyses/
-bigqyery_ingesting/
+bigquery_ingesting/
 dbt_internal_packages/
 dbt_packages/
 logs/
