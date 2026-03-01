@@ -1,7 +1,4 @@
 # Ingestion runtime dependencies
-pandas>=2.0
-pyarrow>=9.0
-requests>=2.28
 
 # TODO: Add Python dependencies required by the python ingestion asset.
 # - Keep this intentionally minimal.
@@ -12,3 +9,6 @@ requests>=2.28
 # pandas==2.2.0
 # requests==2.31.0
 
+pandas>=2.0
+pyarrow>=9.0
+requests>=2.28
