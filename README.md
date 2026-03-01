@@ -29,3 +29,10 @@
 - [dbt project files](/04-analytics-engineering/)
 - public learning posts
   - [Repo-Contribute-02](https://github.com/DataTalksClub/data-engineering-zoomcamp/pull/823)
+
+### 05-data-platforms
+- [homework choices](/05-data-platforms/5th_week_homework.md)
+- [bruin example project](/05-data-platforms/bruin-pipeline/)
+- [bruin zoomcamp project](/05-data-platforms/zoomcamp/)
+- public learning posts
+  - 
