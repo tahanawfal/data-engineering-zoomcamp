@@ -35,4 +35,4 @@
 - [bruin example project](/05-data-platforms/bruin-pipeline/)
 - [bruin zoomcamp project](/05-data-platforms/zoomcamp/)
 - public learning posts
-  - 
+  - []()
