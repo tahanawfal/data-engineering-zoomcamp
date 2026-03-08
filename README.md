@@ -36,3 +36,8 @@
 - [bruin zoomcamp project](/05-data-platforms/zoomcamp/)
 - public learning posts
   - []()
+ 
+### 05.2-dlt-workshop
+- [homework choices](/05.2-dlt-workshop/workshop_week_homework.md)
+- public learning posts
+  - []()
