@@ -11,5 +11,7 @@ target/
 dbt_packages/
 logs/
 # end dbt Cloud content
-
+*.db
 .bruin.yml
+__pycache__/
+*.py[cod]
