@@ -77,13 +77,10 @@ columns:
 # TODO: Add one custom check that validates a staging invariant (uniqueness, ranges, etc.)
 # Docs: https://getbruin.com/docs/bruin/quality/custom
 custom_checks:
-  - name: staging_non_negative_rows
-    description: Ensure staging returns a non-negative row count for the time window
-    query: |
-      SELECT COUNT(*)
-      FROM ingestion.trips
-      WHERE pickup_datetime >= '{{ start_datetime }}' AND pickup_datetime < '{{ end_datetime }}'
-    value: 0
+  - name: row_count_positive
+    description: Ensure the table is not empty
+    query: SELECT COUNT(*) > 0 FROM staging.trips
+    value: 1
 
 @bruin */
 

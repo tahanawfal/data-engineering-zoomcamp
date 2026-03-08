@@ -13,7 +13,5 @@ logs/
 # end dbt Cloud content
 *.db
 .bruin.yml
-logs/runs
-logs/*.log
 __pycache__/
 *.py[cod]
