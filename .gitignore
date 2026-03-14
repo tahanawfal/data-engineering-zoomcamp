@@ -15,3 +15,7 @@ logs/
 .bruin.yml
 __pycache__/
 *.py[cod]
+.ipynb_checkpoints/
+*.csv
+*.csv.gz
+fhvhv/
