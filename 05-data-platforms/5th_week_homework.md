@@ -7,8 +7,8 @@ In a Bruin project, what are the required files/directories?
 
 - `bruin.yml` and `assets/`
 - `.bruin.yml` and `pipeline.yml` (assets can be anywhere)
-- `.bruin.yml` and `pipeline/` with `pipeline.yml` and `assets/` ✅
-- `pipeline.yml` and `assets/` only
+- `.bruin.yml` and `pipeline/` with `pipeline.yml` and `assets/` ❌
+- `pipeline.yml` and `assets/` only ✅
 
 ---
 
