@@ -41,3 +41,9 @@
 - [homework choices](/05.2-dlt-workshop/workshop_week_homework.md)
 - public learning posts
   - []()
+
+### 06-batch
+- [homework choices](/06-batch/6th_week_homework.md)
+- [Scripts Folder](/06-batch/code/)
+- public learning posts
+  - []()
